@@ -1,6 +1,9 @@
 const bolinha = document.querySelector('#bolinha')
 let sentidoY = 1
 let sentidoX = 1
+const pontuacao = document.querySelector('#pontuacao')
+const somPontos = document.querySelector('#somPontos')
+let pontos = 0
         const objBolinha = {
             raio: 25,
             x: 0,
@@ -11,12 +14,7 @@ let sentidoX = 1
                 objBolinha.x += 10
                 bolinha.style.left = objBolinha.x + 'px'
             }    
-        /*function direita() {
-            if (objBolinha.x < 1310) {
-                objBolinha.x += 10
-                bolinha.style.left = objBolinha.x + 'px'
-            }    
-        }*/
+        
         function esquerda() {
             objBolinha.x -= 10
             bolinha.style.left = objBolinha.x + 'px'
@@ -27,16 +25,6 @@ let sentidoX = 1
                 bolinha.style.top = objBolinha.y + 'px'
         }
 
-        /*function baixo() {
-            if (objBolinha.y < 570 && sentidoY == 1) {    
-                objBolinha.y += 10
-                bolinha.style.top = objBolinha.y + 'px'
-            }    else {
-                sentidoY = -1
-                objBolinha.y -= 10
-                bolinha.style.top = objBolinha.y + 'px'
-            }
-        }*/
         function cima() {
             objBolinha.y -= 10
             bolinha.style.top = objBolinha.y + 'px'
@@ -69,7 +57,17 @@ let sentidoX = 1
                 baixo()
             }
         }
+function contaPontos() {
+    somPontos.play()
+    pontos++
+    pontuacao.textContent = 'Pontos: ' + pontos
+}
 const movimentoAutomatico = setInterval(() => {
     escolheSentidoX() 
     escolheSentidoY()
 }, 100);
+
+bolinha.addEventListener('click', () => {
+    contaPontos()
+    console.log('bolinha clicada')
+})

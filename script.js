@@ -42,7 +42,7 @@ let sentidoX = 1
             bolinha.style.top = objBolinha.y + 'px'
         }
         function escolheSentidoX() {
-            if (objBolinha.x < 1310 && sentidoX == 1) {
+            if (objBolinha.x < window.innerWidth -50 && sentidoX == 1) {
                 direita()
             } else {
                 sentidoX = -1
@@ -56,7 +56,7 @@ let sentidoX = 1
             }
         }
         function escolheSentidoY() {
-            if (objBolinha.y < 570 && sentidoY == 1) {
+            if (objBolinha.y < window.innerHeight -50 && sentidoY == 1) {
                 baixo()
             } else {
                 sentidoY = -1

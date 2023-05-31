@@ -14,22 +14,8 @@
     top: 0;
 }
 #bolinha:hover {
-    background-color: aqua;
+    background-color: gray;
 }
-#azul {
-    background-color: #235789;
-    width: 20px;
-} 
-#amarelo {
-    background-color: #F1D302;
-    width: 20px;
-
-} 
-#preto {
-    background-color: black;
-    width: 20px;
-
-} 
 body {
     background: linear-gradient(to bottom right, #235789, #F1D302);
     width: 100vw;
@@ -56,6 +42,32 @@ body {
     color: white;
 }
 #botParar:hover {
+    color: #F1D302;
+    border: 1px solid #F1D302;
+}
+#botReiniciar {
+    position: absolute;
+    left: 88vw;
+    top: 1vh;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 15px;
+    color: white;
+}
+#botReiniciar:hover {
+    color: #F1D302;
+    border: 1px solid #F1D302;
+}
+#botIniciar {
+    position: absolute;
+    left: 82vw;
+    top: 1vh;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 15px;
+    color: white;
+}
+#botIniciar:hover {
     color: #F1D302;
     border: 1px solid #F1D302;
 }

@@ -1,6 +1,7 @@
 🎾 Jogo da Bolinha
 
 Um jogo simples em JavaScript onde você clica na bolinha para marcar pontos enquanto ela se move e rebate pelas bordas da tela.
+Demo: https://note-salaf.github.io/bolinharebatendo/
 
 🚀 Funcionalidades
 
